@@ -12,6 +12,8 @@ text-align: center;
 
 function NewCustomer({ onAddCustomer }) {
   const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
   const [state, setSt] = useState("");
   const [errors, setErrors] = useState([]);
@@ -20,7 +22,10 @@ function NewCustomer({ onAddCustomer }) {
     e.preventDefault();
     const formData = {
       name,
+      age,
+      email,
       city,
+      state
     };
     fetch(BASE_URL + "/customers", {
       method: "POST",
@@ -32,6 +37,8 @@ function NewCustomer({ onAddCustomer }) {
       if (r.ok) {
         r.json().then((customer) => {
           setName("");
+          setAge("");
+          setEmail("");
           setCity("");
           setSt("");
           setErrors([]);
@@ -46,7 +53,8 @@ function NewCustomer({ onAddCustomer }) {
   return (
     <form onSubmit={handleSubmit}>
       <center>
-      <h2>Add New Customer</h2>
+      <h2>New User?</h2>
+      <h4>(sign up here)</h4>
       <span>
         <label htmlFor="name">Name: </label>
         <input
@@ -54,6 +62,24 @@ function NewCustomer({ onAddCustomer }) {
           id="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+        />
+      </span>
+      <span>
+        <label htmlFor="age">Age: </label>
+        <input
+          type="text"
+          id="age"
+          value={age}
+          onChange={(e) => setAge(e.target.value)}
+        />
+      </span>
+      <span>
+        <label htmlFor="email">Email: </label>
+        <input
+          type="text"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </span>
       <span>

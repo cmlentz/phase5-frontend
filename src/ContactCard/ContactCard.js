@@ -47,10 +47,10 @@ export default function ContactCard({
 }) {
   return (
     <Wrapper>
-      <Avatar
+      {/* <Avatar
         alt=""
         src={avatarSrc}
-      />
+      /> */}
       <CardHeading>{name}</CardHeading>
       <CardLocation>{location}</CardLocation>
       <CardEmail>{email}</CardEmail>

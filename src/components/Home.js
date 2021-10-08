@@ -8,7 +8,7 @@ const StyledHeader = styled.h2`
 font-size: 2rem;
 border: 1px solid;
 border-radius: 5px;
-background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(255,0,0,1));
+background-image: linear-gradient(to left, rgba(100,54,143,0), rgba(100,54,143,1));
 text-align: center;
 `
 
@@ -16,7 +16,7 @@ const ReverseStyledHeader = styled.h2`
 font-size: 2rem;
 border: 1px solid;
 border-radius: 5px;
-background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+background-image: linear-gradient(to right, rgba(100,54,143,0), rgba(100,54,143,1));
 text-align: center;
 `
 
@@ -62,12 +62,12 @@ function Home() {
 
   return (
     <div>
-      <StyledHeader>Customers</StyledHeader>
+      <StyledHeader>Explorers</StyledHeader>
       <ul>
         {customers.map((customer) => (
           <li key={customer.id}>
             <span>{customer.name}  </span>
-            <Link to={`/customers/${customer.id}`}>Visit Customer</Link>
+            <Link to={`/customers/${customer.id}`}>View User</Link>
           </li>
         ))}
       </ul>
@@ -75,7 +75,7 @@ function Home() {
       <ul>
         {activities.map((activity) => (
           <li key={activity.id}>
-            <span>{activity.species}  </span>
+            <span>{activity.name}  </span>
             <StyledButton onClick={() => handleDeleteActivity(activity.id)}>
               Delete
             </StyledButton>

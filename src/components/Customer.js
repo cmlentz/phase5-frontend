@@ -57,18 +57,18 @@ function Customer() {
       <div id="outer">
         <LeftDiv>
           <ContactCard
-            avatarSrc="https://cdn.quotesgram.com/small/61/60/913087158-laugh.jpg"
+            avatarSrc=""
             name={customer.name}
             location={ `${customer.city}, ${customer.state}` }
-            email={`${customer.name}@petfinder.com`}
+            email={`${customer.email}`}
           />
         </LeftDiv>
         <RightDiv>
           <ul>
-            <li><h2>Available Pets: </h2></li>
+            <li><h2>Activity Options: </h2></li>
             {customer.activities.map((activity) => (
               <li key={activity.id}>
-                {activity.species}
+                {activity.name}
               </li>
             ))}
           </ul>
