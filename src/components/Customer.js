@@ -57,7 +57,6 @@ function Customer() {
       <div id="outer">
         <LeftDiv>
           <ContactCard
-            avatarSrc=""
             name={customer.name}
             location={ `${customer.city}, ${customer.state}` }
             email={`${customer.email}`}

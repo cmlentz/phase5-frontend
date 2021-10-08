@@ -33,13 +33,13 @@ function Home() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch(BASE_URL + '/activities')
+    fetch(BASE_URL + "/activities")
       .then((r) => r.json())
       .then(setActivities);
   }, []);
 
   useEffect(() => {
-    fetch(BASE_URL + '/customers')
+    fetch(BASE_URL + "/customers")
       .then((r) => r.json())
       .then(setCustomers);
   }, []);
@@ -71,7 +71,7 @@ function Home() {
           </li>
         ))}
       </ul>
-      <ReverseStyledHeader>Activities</ReverseStyledHeader>
+      <ReverseStyledHeader>Things To Do</ReverseStyledHeader>
       <ul>
         {activities.map((activity) => (
           <li key={activity.id}>

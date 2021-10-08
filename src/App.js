@@ -8,7 +8,7 @@ const StyledHeader = styled.h2`
 font-size: 3rem;
 border: 1px solid;
 border-radius: 5px;
-background-image: linear-gradient(180deg, red, yellow);
+background-image: linear-gradient(180deg, yellow, green);
 text-align: center;
 `
 

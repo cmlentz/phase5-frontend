@@ -9,17 +9,17 @@ const Wrapper = styled.article`
   text-align: center;
 `
 
-const Avatar = styled.img`
-  display: block;
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -64px;
-  margin-bottom: 16px;
-  border: 6px solid white;
-`
+// const Avatar = styled.img`
+//   display: block;
+//   width: 128px;
+//   height: 128px;
+//   border-radius: 50%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-top: -64px;
+//   margin-bottom: 16px;
+//   border: 6px solid white;
+// `
 
 const CardHeading = styled.h2`
   font-size: 1.25rem;
@@ -40,7 +40,7 @@ const CardEmail = styled.p`
 `
 
 export default function ContactCard({
-  avatarSrc,
+  // avatarSrc,
   name,
   location,
   email
