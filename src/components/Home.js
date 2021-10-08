@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NewCustomer from "./NewCustomer";
 import styled from 'styled-components/macro';
-import { BASE_URL } from '../constraints/index.js';
+import {BASE_URL} from '../constraints/index.js';
 
 const StyledHeader = styled.h2`
 font-size: 2rem;
@@ -33,13 +33,13 @@ function Home() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch(BASE_URL + "/activities")
+    fetch(BASE_URL + '/activities')
       .then((r) => r.json())
       .then(setActivities);
   }, []);
 
   useEffect(() => {
-    fetch(BASE_URL + "/customers")
+    fetch(BASE_URL + '/customers')
       .then((r) => r.json())
       .then(setCustomers);
   }, []);

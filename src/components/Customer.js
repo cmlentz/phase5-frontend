@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import NewRegister from "./NewRegister";
 import {BASE_URL} from '../constraints/index.js';
-import ContactCard from './ContactCard/ContactCard';
+import ContactCard from '../ContactCard/ContactCard';
 import styled from 'styled-components/macro';
 
 const LeftDiv = styled.div`

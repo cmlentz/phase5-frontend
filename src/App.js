@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import Customer from "./Customer";
-import Home from "./Home";
-import GlobalStyles from "./GlobalStyles"
+import Customer from "./components/Customer";
+import Home from "./components/Home";
+import GlobalStyles from "./components/GlobalStyles"
 import styled from 'styled-components/macro';
 
 const StyledHeader = styled.h2`
