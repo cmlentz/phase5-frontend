@@ -6,8 +6,9 @@ const StyledButton = styled.button`
 font-size: 1rem;
 border: 1px solid;
 border-radius: 2px;
-background-color: limegreen;
+background-color: lightgrey;
 text-align: center;
+&:hover {background-color: limegreen; cursor: pointer};
 `
 
 function NewRegister({ customerId, onAddActivity }) {

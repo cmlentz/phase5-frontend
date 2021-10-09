@@ -57,6 +57,7 @@ function Customer() {
       <div id="outer">
         <LeftDiv>
           <ContactCard
+            avatarSrc="https://img.icons8.com/emoji/48/000000/grinning-face-with-big-eyes--v2.png"
             name={customer.name}
             location={ `${customer.city}, ${customer.state}` }
             email={`${customer.email}`}
@@ -64,7 +65,7 @@ function Customer() {
         </LeftDiv>
         <RightDiv>
           <ul>
-            <li><h2>Activity Options: </h2></li>
+            <li><h2>{customer.name}'s Favorite Activities:</h2></li>
             {customer.activities.map((activity) => (
               <li key={activity.id}>
                 {activity.name}

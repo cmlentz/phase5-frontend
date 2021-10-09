@@ -19,7 +19,7 @@ function App() {
     <Router>
     <div className="App">
       <StyledHeader>
-        <Link to="/">Let's Get Out</Link>
+        <Link to="/" style={{ textDecoration: 'none' }}>Let's <i><sub>Get</sub></i> Out</Link>
       </StyledHeader>
       <br />
       <Switch>

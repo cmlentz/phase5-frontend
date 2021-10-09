@@ -20,13 +20,23 @@ background-image: linear-gradient(to right, rgba(100,54,143,0), rgba(100,54,143,
 text-align: center;
 `
 
-const StyledButton = styled.button`
+const ActivityButton = styled.button`
 font-size: 1rem;
 border: 1px solid;
 border-radius: 2px;
-background-color: red;
+background-color: yellow;
 text-align: center;
+margin-right: 10px;
+margin-bottom: 5px;
+&:hover {background-color: red; cursor: pointer};
 `
+
+const StyledLink = styled(Link)`
+  color: limegreen;
+  font-weight: bold;
+  margin-bottom: 5px;
+  &:hover {color: forestgreen; cursor: pointer};
+`;
 
 function Home() {
   const [customers, setCustomers] = useState([]);
@@ -63,11 +73,11 @@ function Home() {
   return (
     <div>
       <StyledHeader>Explorers</StyledHeader>
+      <center><h5>(Click name to view user profile)</h5></center>
       <ul>
         {customers.map((customer) => (
           <li key={customer.id}>
-            <span>{customer.name}  </span>
-            <Link to={`/customers/${customer.id}`}>View User</Link>
+            <StyledLink to={`/customers/${customer.id}`}>{customer.name}</StyledLink>
           </li>
         ))}
       </ul>
@@ -75,10 +85,10 @@ function Home() {
       <ul>
         {activities.map((activity) => (
           <li key={activity.id}>
-            <span>{activity.name}  </span>
-            <StyledButton onClick={() => handleDeleteActivity(activity.id)}>
+            <ActivityButton onClick={() => handleDeleteActivity(activity.id)}>
               Delete
-            </StyledButton>
+            </ActivityButton>
+            <span>{activity.name}</span>
           </li>
         ))}
       </ul>

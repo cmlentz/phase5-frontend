@@ -8,6 +8,8 @@ border: 1px solid;
 border-radius: 2px;
 background-color: limegreen;
 text-align: center;
+margin-left: 10px;
+&:hover {cursor: pointer};
 `
 
 function NewCustomer({ onAddCustomer }) {
@@ -54,7 +56,7 @@ function NewCustomer({ onAddCustomer }) {
     <form onSubmit={handleSubmit}>
       <center>
       <h2>New User?</h2>
-      <h4>(sign up here)</h4>
+      <h5>(sign up here)</h5>
       <span>
         <label htmlFor="name">Name: </label>
         <input
@@ -65,7 +67,7 @@ function NewCustomer({ onAddCustomer }) {
         />
       </span>
       <span>
-        <label htmlFor="age">Age: </label>
+        <label htmlFor="age"> Age: </label>
         <input
           type="text"
           id="age"
@@ -74,7 +76,7 @@ function NewCustomer({ onAddCustomer }) {
         />
       </span>
       <span>
-        <label htmlFor="email">Email: </label>
+        <label htmlFor="email"> Email: </label>
         <input
           type="text"
           id="email"
@@ -83,7 +85,7 @@ function NewCustomer({ onAddCustomer }) {
         />
       </span>
       <span>
-        <label htmlFor="city">City: </label>
+        <label htmlFor="city"> City: </label>
         <input
           type="text"
           id="city"
@@ -92,7 +94,7 @@ function NewCustomer({ onAddCustomer }) {
         />
       </span>
       <span>
-        <label htmlFor="state">State: </label>
+        <label htmlFor="state"> State: </label>
         <input
           type="text"
           id="state"
@@ -105,7 +107,6 @@ function NewCustomer({ onAddCustomer }) {
           {err}
         </p>
       ))}
-      <span>  </span>
       <StyledButton type="submit">Submit</StyledButton>
       </center>
     </form>
