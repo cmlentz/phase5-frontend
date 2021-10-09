@@ -59,7 +59,7 @@ function NewRegister({ customerId, onAddActivity }) {
           <option value="">Select activity...</option>
           {activities.map((activity) => (
             <option key={activity.id} value={activity.id}>
-              {activity.species}
+              {activity.name}
             </option>
           ))}
         </select>
