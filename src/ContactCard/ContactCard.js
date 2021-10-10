@@ -47,7 +47,7 @@ export default function ContactCard({
   return (
     <Wrapper>
       <Avatar
-        alt=""
+        alt="smiley"
         src={avatarSrc}
       />
       <CardHeading>{name}</CardHeading>
