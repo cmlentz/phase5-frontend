@@ -7,12 +7,14 @@ import styled from 'styled-components/macro';
 
 const LeftDiv = styled.div`
 float: left;
-width: 20%;
+width: 50%;
 padding: 10px;
+text-align: center;
 `
 const RightDiv = styled.div`
 float: left;
 width: 50%;
+text-align: center;
 `
 
 function Customer() {
@@ -54,27 +56,30 @@ function Customer() {
 
   return (
     <div>
-      <div id="outer">
-        <LeftDiv>
-          <ContactCard
-            avatarSrc="https://img.icons8.com/emoji/48/000000/grinning-face-with-big-eyes--v2.png"
-            name={customer.name}
-            location={ `${customer.city}, ${customer.state}` }
-            email={`${customer.email}`}
-          />
-        </LeftDiv>
-        <RightDiv>
-          <ul>
-            <li><h2>{customer.name}'s Favorite Activities:</h2></li>
+      <center>
+        <ContactCard
+          avatarSrc="https://img.icons8.com/emoji/48/000000/grinning-face-with-big-eyes--v2.png"
+          name={customer.name}
+          location={ `${customer.city}, ${customer.state}` }
+          email={`${customer.email}`}
+        />
+      </center>
+      <br/>
+      <div classname="outer">
+      <LeftDiv>
+        <ul>
+          <li><h2>{customer.name}'s Favorite Activities:</h2></li>
             {customer.activities.map((activity) => (
               <li key={activity.id}>
                 {activity.name}
               </li>
             ))}
-          </ul>
-        </RightDiv>
+        </ul>
+        </LeftDiv>
+        <RightDiv>
         <NewRegister onAddActivity={handleAddActivity} customerId={customer.id} />
-      </div>
+        </RightDiv>
+        </div>
     </div>
   );
 }

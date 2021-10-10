@@ -8,8 +8,14 @@ border: 1px solid;
 border-radius: 2px;
 background-color: limegreen;
 text-align: center;
-margin-left: 10px;
+margin-top: 5px;
 &:hover {cursor: pointer};
+`
+
+const StyledForm = styled.form`
+background-color: lightblue;
+padding-right: "10px";
+display: table;
 `
 
 function NewCustomer({ onAddCustomer }) {
@@ -53,63 +59,67 @@ function NewCustomer({ onAddCustomer }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <center>
-      <h2>New User?</h2>
-      <h5>(sign up here)</h5>
-      <span>
-        <label htmlFor="name">Name: </label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </span>
-      <span>
-        <label htmlFor="age"> Age: </label>
-        <input
-          type="text"
-          id="age"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-        />
-      </span>
-      <span>
-        <label htmlFor="email"> Email: </label>
-        <input
-          type="text"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </span>
-      <span>
-        <label htmlFor="city"> City: </label>
-        <input
-          type="text"
-          id="city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-      </span>
-      <span>
-        <label htmlFor="state"> State: </label>
-        <input
-          type="text"
-          id="state"
-          value={state}
-          onChange={(e) => setSt(e.target.value)}
-        />
-      </span>
-      {errors.map((err) => (
-        <p key={err} style={{ color: "red" }}>
-          {err}
-        </p>
-      ))}
-      <StyledButton type="submit">Submit</StyledButton>
-      </center>
-    </form>
+    <div>
+    <StyledForm onSubmit={handleSubmit}>
+      <ul>
+        <li><h2>New User?</h2></li>
+        <li><h5>(sign up here)</h5></li>
+        <li>
+          <label htmlFor="name">Name: </label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </li>
+        <li>
+          <label htmlFor="age"> Age: </label>
+          <input
+            type="text"
+            id="age"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+          />
+        </li>
+        <li>
+          <label htmlFor="email"> Email: </label>
+          <input
+            type="text"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </li>
+        <li>
+          <label htmlFor="city"> City: </label>
+          <input
+            type="text"
+            id="city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+        </li>
+        <li>
+          <label htmlFor="state"> State: </label>
+          <input
+            type="text"
+            id="state"
+            value={state}
+            onChange={(e) => setSt(e.target.value)}
+          />
+        </li>
+        {errors.map((err) => (
+          <p key={err} style={{ color: "red" }}>
+            {err}
+          </p>
+        ))}
+        <li>
+          <StyledButton type="submit">Submit</StyledButton>
+        </li>
+      </ul><br/>
+    </StyledForm>
+    </div>
   );
 }
 

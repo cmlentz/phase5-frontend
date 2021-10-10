@@ -49,6 +49,7 @@ function NewRegister({ customerId, onAddActivity }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <br/>
       <h2>Add New Activity</h2>
       <div>
         <label htmlFor="activity">Activity: </label>

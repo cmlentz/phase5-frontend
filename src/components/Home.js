@@ -6,7 +6,6 @@ import {BASE_URL} from '../constraints/index.js';
 
 const StyledHeader = styled.h2`
 font-size: 2rem;
-border: 1px solid;
 border-radius: 5px;
 background-image: linear-gradient(to left, rgba(100,54,143,0), rgba(100,54,143,1));
 text-align: center;
@@ -14,7 +13,6 @@ text-align: center;
 
 const ReverseStyledHeader = styled.h2`
 font-size: 2rem;
-border: 1px solid;
 border-radius: 5px;
 background-image: linear-gradient(to right, rgba(100,54,143,0), rgba(100,54,143,1));
 text-align: center;
@@ -32,10 +30,13 @@ margin-bottom: 5px;
 `
 
 const StyledLink = styled(Link)`
-  color: limegreen;
-  font-weight: bold;
-  margin-bottom: 5px;
-  &:hover {color: forestgreen; cursor: pointer};
+  font: bold 15px Arial;
+  text-decoration: none;
+  background-color: rgba(100,54,143,1);
+  color: lightblue;
+  padding: 3px 7px 3px 8px;
+  border-radius: 7px;
+  &:hover {color: yellow; cursor: pointer};
 `;
 
 function Home() {
@@ -71,16 +72,23 @@ function Home() {
   }
 
   return (
-    <div>
+    <div style={{
+      paddingTop: "10px",
+      paddingBottom: "10px",
+      background: "lightblue",
+      paddingLeft: "20px",
+      paddingRight: "20px",
+    }}>
       <StyledHeader>Explorers</StyledHeader>
-      <center><h5>(Click name to view user profile)</h5></center>
-      <ul>
+      <ul style={{ marginTop: '5rem', columns: 2, float: 'left', marginLeft: '35%' }}>
         {customers.map((customer) => (
-          <li key={customer.id}>
+              <li style={{ marginBottom: '5px'}} key={customer.id}>
             <StyledLink to={`/customers/${customer.id}`}>{customer.name}</StyledLink>
           </li>
         ))}
       </ul>
+      <NewCustomer onAddCustomer={handleAddCustomer} />
+      <br/>
       <ReverseStyledHeader>Things To Do</ReverseStyledHeader>
       <ul>
         {activities.map((activity) => (
@@ -92,8 +100,6 @@ function Home() {
           </li>
         ))}
       </ul>
-      <hr />
-      <NewCustomer onAddCustomer={handleAddCustomer} />
     </div>
   );
 }

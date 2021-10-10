@@ -5,11 +5,10 @@ import GlobalStyles from "./components/GlobalStyles"
 import styled from 'styled-components/macro';
 
 const StyledHeader = styled.h2`
-font-size: 3rem;
-border: 1px solid;
-border-radius: 5px;
-background-image: linear-gradient(180deg, yellow, green);
+font-size: 4rem;
+background-image: linear-gradient(180deg, green, lightblue);
 text-align: center;
+&:hover {cursor: pointer};
 `
 
 function App() {
