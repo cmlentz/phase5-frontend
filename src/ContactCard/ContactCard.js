@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro';
 
 const Wrapper = styled.article`
-  max-width: 350px;
-  border-radius: 32px;
+  max-width: 375px;
+  border-radius: 35px;
   padding: 50px;
   background: Cornsilk;
   box-shadow: 0px 2px 20px hsl(0, 100%, 40%);

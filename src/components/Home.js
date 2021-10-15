@@ -36,7 +36,7 @@ const StyledLink = styled(Link)`
   color: lightblue;
   padding: 3px 7px 3px 8px;
   border-radius: 7px;
-  &:hover {color: yellow; cursor: pointer};
+  &:hover {color: rgba(100,54,143,1); background: lightblue; cursor: pointer};
 `;
 
 function Home() {
