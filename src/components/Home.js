@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import NewCustomer from "./NewCustomer";
 import styled from 'styled-components/macro';
 import {BASE_URL} from '../constraints/index.js';
+import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from "react";
 
 const StyledHeader = styled.h2`
 font-size: 2rem;
@@ -32,11 +33,10 @@ margin-bottom: 5px;
 const StyledLink = styled(Link)`
   font: bold 15px Arial;
   text-decoration: none;
-  background-color: rgba(100,54,143,1);
-  color: lightblue;
+  color: rgba(100,54,143,1);
   padding: 3px 7px 3px 8px;
   border-radius: 7px;
-  &:hover {color: rgba(100,54,143,1); background: lightblue; cursor: pointer};
+  &:hover {background: rgba(100,54,143,1); color: lightblue; cursor: pointer};
 `;
 
 function Home() {
@@ -76,13 +76,11 @@ function Home() {
       paddingTop: "10px",
       paddingBottom: "10px",
       background: "lightblue",
-      paddingLeft: "20px",
-      paddingRight: "20px",
     }}>
       <StyledHeader>Explorers</StyledHeader>
-      <ul style={{ marginTop: '5rem', columns: 2, float: 'left', marginLeft: '35%' }}>
+      <ul style={{ paddingRight: "30px", marginTop: '5rem', columns: 3, float: 'left', marginLeft: '30%' }}>
         {customers.map((customer) => (
-              <li style={{ marginBottom: '5px'}} key={customer.id}>
+          <li style={{ marginBottom: '5px'}} key={customer.id}>
             <StyledLink to={`/customers/${customer.id}`}>{customer.name}</StyledLink>
           </li>
         ))}

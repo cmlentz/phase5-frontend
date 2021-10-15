@@ -8,13 +8,13 @@ border: 1px solid;
 border-radius: 2px;
 background-color: limegreen;
 text-align: center;
-margin-top: 5px;
+margin-top: 10px;
 &:hover {cursor: pointer};
 `
 
 const StyledForm = styled.form`
 background-color: lightblue;
-padding-right: "10px";
+padding-right: "50px";
 display: table;
 `
 
